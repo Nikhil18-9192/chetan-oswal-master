@@ -1,0 +1,56 @@
+@mixin for-phone-only {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @mixin for-phone-only-landscape{
+    @media (min-width: 600px)and (max-width: 850px) {
+      @content;
+    }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  @mixin for-tablet-only {
+    @media (min-width: 600px) and (max-width: 812px) {
+      @content;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  $blueAccent: #205373;
+  $darkBlueAccent: #073D5F;
+  $greyAccent: #EFEFEF;
+  $darkAccent: #101010;
+  $textColor: #464646;
+  $footerTextColor:#C2C2C2;
+  $backgroundLightGrey:#F8F8F8;
+  $accent: #fff;
+  
