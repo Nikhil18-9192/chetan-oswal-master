@@ -28,25 +28,26 @@
      </div>
      <AppButton v-if="$device.isMobile" />
      <MobileMenu v-if="$store.state.menu"/>
-     <AppMenu v-bind:class="'menu-bar'" />
+      <AppMenu :class="'menu-navigation'" />
 </div>
 </template>
-<script>
-import Vue from 'vue'
+<script  >
+ 
 import AppButton from '@/components/AppButton.vue'
 import MobileMenu from '@/components/MobileMenu.vue'
 import AppMenu from '@/components/AppMenu'
-export default  Vue.extend({
+export default   {
     components:{AppButton, MobileMenu, AppMenu},
     data(){
         return{
             contactInfo:{
                  mail:'ca.chetanoswal@gmail.com',
                  phone: '+91 9890 828242'
-                }
+                },
+            menu:['Home', 'What We Do', 'Who We Are', 'Gallery', 'Quick Links', 'Insights', 'Contact us']
               }
             }
-});
+};
 </script>
 <style lang="scss" scoped>
 .top-header{
@@ -106,12 +107,21 @@ export default  Vue.extend({
         width: 100%;
     }
 }
-.menu-bar{
+.menu-navigation{
     background: #073D5F;
     display: flex;
     justify-content: center;
-    
-    
+    a{
+        margin-right: 40px;
+        text-decoration: none;
+        padding: 10px;
+        &:hover{background: #083049;}
+
+        p{
+            font-size: 15px;
+            line-height: 20px;
+            color: #fff;
+        }
+    }
 }
- 
 </style>

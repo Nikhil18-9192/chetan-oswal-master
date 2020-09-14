@@ -1,15 +1,21 @@
 <template>
   <div>
-     <Home />
+    <Home />
+    <WhoWeAre />
+    <WhatWeDo />
+    <HowWeWork />
   </div>
 </template>
+
 <script>
-import Vue from 'vue'
  
-import Home from '@/components/home/HomeCarousel.vue'
-export default Vue.extend({
-    components:{ Home}
-})
+import Home from '@/components/home/HomeCarousel'
+import WhoWeAre from '@/components/home/WhoWeAre'
+import WhatWeDo from '@/components/home/WhatWeDo'
+import HowWeWork from '@/components/home/HowWeWork'
+export default  {
+    components:{Home, WhoWeAre, WhatWeDo, HowWeWork}
+}
 </script>
 
 <style>

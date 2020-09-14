@@ -1,7 +1,6 @@
 <template>
     <div class="footer">
-        
-        <AppMenu v-bind:class="'footer-menu a p'"/>
+         <AppMenu :class="'footer-menu'"/>
         <div class="footer-contact">
             <div class="container">
                 <div class="row">
@@ -61,11 +60,10 @@
         </div>
     </div>
 </template>
-<script >
-import Vue from 'vue'
+<script>
 import AppMenu from '@/components/AppMenu'
 import contactInfo from '../utils'
-export default Vue.extend ({
+export default{
     components:{AppMenu},
     data(){
         return{
@@ -78,7 +76,7 @@ export default Vue.extend ({
             socialIcon:['/facebook.svg', '/linkdin.svg', '/instagram.svg', '/tweeter.svg']
               }
             }
-});
+};
 </script>
 <style lang="scss" scoped>
 .footer{
